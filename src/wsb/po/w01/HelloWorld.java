@@ -1,4 +1,4 @@
-package wsb.po.first;
+package wsb.po.w01;
 
 public class HelloWorld {
 

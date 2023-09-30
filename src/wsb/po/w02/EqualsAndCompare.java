@@ -1,4 +1,4 @@
-package wsb.po.second;
+package wsb.po.w02;
 
 public class EqualsAndCompare {
 
