@@ -29,6 +29,7 @@ public class BankAccountTester {
         account = new SavingsAccount(200,10);
         klient2.addAccount(account);
 
+
         System.out.println("Klient 1 " + klient1);
         for (int i = 0; i < klient1.getNumberOfAccounts(); i++) {
             printAccount(klient1.getAccount(i),i);

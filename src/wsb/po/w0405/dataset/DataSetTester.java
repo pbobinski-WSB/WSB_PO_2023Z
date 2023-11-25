@@ -1,5 +1,7 @@
 package wsb.po.w0405.dataset;
 
+import java.awt.*;
+
 /**
    This program computes the average and maximum of a set
    of input values.
@@ -21,6 +23,14 @@ public class DataSetTester
          @Override
          public double measure(Object anObject) {
             return ((Coin)anObject).getMeasure() * Exchange.toPlnRate;
+         }
+      }
+
+      class RectangleMeasurer implements Measurer {
+         public double measure(Object anObject) {
+            Rectangle aRectangle = (Rectangle) anObject;
+            double area = aRectangle.getWidth() * aRectangle.getHeight();
+            return area;
          }
       }
 
@@ -50,6 +60,19 @@ public class DataSetTester
       System.out.println("Maximum = " + data.getMaximum());
       //System.out.println("Maximum name = " + data.getMaximum().getName());
       System.out.println("Maximum name = " + ((Coin)data.getMaximum()).getName());
+      System.out.println("Maximum value in currency = " + data.getMeasurer().measure(data.getMaximum()));
+
+
+      m = new RectangleMeasurer();
+
+      data = new DataSet(m);
+      data.add(new Rectangle(0,0));
+      data.add(new Rectangle(10,20));
+
+      System.out.println("Average = " + data.getAverage());
+      System.out.println("Maximum = " + data.getMaximum());
+      //System.out.println("Maximum name = " + data.getMaximum().getName());
+      //System.out.println("Maximum name = " + ((Coin)data.getMaximum()).getName());
       System.out.println("Maximum value in currency = " + data.getMeasurer().measure(data.getMaximum()));
 
 

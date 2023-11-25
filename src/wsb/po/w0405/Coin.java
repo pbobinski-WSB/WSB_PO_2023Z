@@ -16,13 +16,13 @@ public class Coin implements Measurable
 
    /**
       Constructs a coin.
-      @param aValue the monetary value of the coin
-      @param aName the name of the coin
+      @param value the monetary value of the coin
+      @param name the name of the coin
    */
-   public Coin(double aValue, String aName) 
-   { 
-      value = aValue; 
-      name = aName;
+   public Coin(double value, String name)
+   {
+      this.value = value;
+      this.name = name;
    }
 
    /**
