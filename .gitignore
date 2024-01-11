@@ -27,3 +27,6 @@ replay_pid*
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/WSB_PO_2023Z.iml
+/.idea/jpa-buddy.xml
+/moneta.ser
+/w.txt
