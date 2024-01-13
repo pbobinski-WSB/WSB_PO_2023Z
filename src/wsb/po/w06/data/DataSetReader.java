@@ -61,7 +61,7 @@ public class DataSetReader
    private void readValue(Scanner in, int i) throws BadDataException
    {
       if (!in.hasNextDouble()) 
-         throw new BadDataException("Data value expected");
+         throw new BadDataException("Data value expected in line "+i);
       data[i] = in.nextDouble();      
    }
 }
